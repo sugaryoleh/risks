@@ -1,5 +1,37 @@
-{% for obj in objects%}
-<ul>
-  <li>{{ obj }}</li>
-</ul>
-{% endfor %}
+{% extends 'app/base.html' %}
+{% block content %}
+<table>
+  <tr>
+    <th>Order#</th>
+    <th>Danger type</th>
+    <th>Asset name</th>
+    <th>Asset owner</th>
+    <th>Location</th>
+    <th>Asset category</th>
+    <th>Danger</th>
+    <th>Danger source</th>
+    <th>Implementation mechanism</th>
+    <th>K</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  {% for object in objects %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ object.danger_type }}</td>
+    <td>{{ object.asset.name }}</td>
+    <td>{{ object.asset.owner }}</td>
+    <td>{{ object.asset.location }}</td>
+    <td>{{ object.asset.category }}</td>
+    <td>{{ object.danger }}</td>
+    <td>{{ object.danger_source }}</td>
+    <td>{{ object.implementation_mechanism }}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

@@ -6,7 +6,7 @@ from django.utils.translation import gettext_lazy as _
 class Asset(Model):
     class AssetName(TextChoices):
         SERVER = 'Server', _('Server')
-        PERSONAL_DATA = 'Personal client\'s data', _('Personal client\'s data')
+        PERSONAL_DATA = 'Personal data', _('Personal data')
         COMPANY_CONTRACTS = 'Company contracts', _('Company contracts')
 
     class AssetOwner(TextChoices):

@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<table>
+  <tr>
+    <th>Order#</th>
+    <th>Danger</th>
+    <th>Danger source</th>
+    <th>Implementation mechanism</th>
+  </tr>
+  {% for object in objects %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ object.danger }}</td>
+    <td>{{ object.danger_source }}</td>
+    <td>{{ object.implementation_mechanism }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
